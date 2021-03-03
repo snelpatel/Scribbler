@@ -36,7 +36,7 @@ document.addEventListener("click",function(e) {
         sessionStorage.setItem("postContent", contentNode.innerText);
     }
     else if (hasClass(e.target, "like-button")) {
-        // Like Button Clicked
+        // When like button is clicked
         likeCounter++;
         e.target.innerHTML = '<i class="fa fa-thumbs-up"></i> Liked';
         if (likeCounter == 1) {
@@ -46,7 +46,16 @@ document.addEventListener("click",function(e) {
             document.getElementById("likeText").innerHTML =
             likeCounter + " people like this!";
         }
-    }    
+    }
+    else if (hasClass(e.target, "comment-button")) {
+        //When Comment button is clicked
+        var commentText = document.getElementById("commentBox").value.trim();
+        if (commentText !== "") {
+          //Following line of code displays latest comment on the top
+          document.getElementById("commentsWrapper").innerHTML = "<p>" +commentText+ "</p>" + document.getElementById("commentsWrapper").innerHTML;
+        }        
+        document.getElementById("commentBox").value = "";
+    }
 }, false);
 
 function hasClass(elem, className) {
