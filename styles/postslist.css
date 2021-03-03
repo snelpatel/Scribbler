@@ -58,3 +58,26 @@ body {
     height: 3.6em;
     overflow: hidden;
 }
+
+.fa-trash,
+.fa-ellipsis-h {
+  color: #838383;
+  float: right;
+  cursor: pointer;
+}
+
+#deletePostModal .modal-content {
+  width: 24%;
+  margin: 15% auto;
+}
+
+#deletePostModal .button-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+#deletePostModal .button-wrapper button {
+  padding: 5px 20px;
+  border-radius: 0;
+}
