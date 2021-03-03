@@ -1,3 +1,4 @@
+var likeCounter = 0;
 var titleNode = document.getElementById("postTitle");
 var authorNode = document.getElementById("author");
 var contentNode = document.getElementById("postContent");
@@ -33,6 +34,18 @@ document.addEventListener("click",function(e) {
         // Updating Session storage on Save to reflect correct data if only this page is refreshed
         sessionStorage.setItem("postTitle", titleNode.innerText);
         sessionStorage.setItem("postContent", contentNode.innerText);
+    }
+    else if (hasClass(e.target, "like-button")) {
+        // Like Button Clicked
+        likeCounter++;
+        e.target.innerHTML = '<i class="fa fa-thumbs-up"></i> Liked';
+        if (likeCounter == 1) {
+            document.getElementById("likeText").innerHTML = "1 person likes this!";
+        } 
+        else if (likeCounter > 1) {
+            document.getElementById("likeText").innerHTML =
+            likeCounter + " people like this!";
+        }
     }    
 }, false);
 
