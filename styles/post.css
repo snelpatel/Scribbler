@@ -17,3 +17,22 @@
 #author {
     font-size: 17px;
 }
+
+.btn-common,
+.btn-common:hover,
+.btn-common:focus {
+  border-radius: 0;
+  background-color: red;
+  border: none;
+  padding: 5px 15px;
+}
+
+.editable {
+  outline: 1px solid pink;
+}
+
+.author-edit-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
