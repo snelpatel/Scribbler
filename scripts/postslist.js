@@ -36,14 +36,14 @@ window.addEventListener("click", function(event) {
 cancelDelete.addEventListener("click", () => closeModal(deletePostModal));
 confirmDelete.addEventListener("click", () => deletePost());
 
-// Updating Session storage before redirecting to post.html page to view the clicked post
+//search the dots
+var dots = document.querySelectorAll(".dots");
+var dotsArray = Array.from(dots);
+
+dotsArray.map(dot => {
+    dot.addEventListener("click", e => navigateToPost(e.target));
+});
+
 navigateToPost = postThread => {
-    var post = postThread.closest(".post");
-    var author = post.querySelector(".username p").textContent.trim();
-    var postTitle = post.querySelector(".title p").textContent.trim();
-    var postContent = post.querySelector(".content").textContent.trim();
-    sessionStorage.setItem("author", author);
-    sessionStorage.setItem("postTitle", postTitle);
-    sessionStorage.setItem("postContent", postContent);
     window.location.href = "../html/post.html";
 };
