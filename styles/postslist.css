@@ -8,3 +8,11 @@ body {
     align-items: center;
     padding: 20px 5%;
 }
+
+.post {
+    width: 45%;
+    margin: 15px auto;
+    display: flex;
+    border-radius: 20px;
+    box-shadow: 0 0 5px 2px #ccc;
+}
