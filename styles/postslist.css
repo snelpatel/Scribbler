@@ -34,3 +34,27 @@ body {
     color: #838383;
     font-weight: bold;
 }
+
+.post .content-wrapper {
+    background-color: #ededed;
+    padding: 20px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.post .content-wrapper .title {
+    color: #838383;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.post .content-wrapper .title p {
+    margin: 0 10px 0 0;
+}
+
+.post .content-wrapper .content {
+    line-height: 1.2em;
+    height: 3.6em;
+    overflow: hidden;
+}
