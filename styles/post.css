@@ -1,0 +1,15 @@
+.post-wrapper {
+    width: 90%;
+    margin: 10px auto;
+}
+
+.post-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.post-content {
+    margin-bottom: 20px;
+}
