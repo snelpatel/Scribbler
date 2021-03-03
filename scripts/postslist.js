@@ -45,5 +45,12 @@ dotsArray.map(dot => {
 });
 
 navigateToPost = postThread => {
+    var post = postThread.closest(".post");
+    var author = post.querySelector(".username p").textContent.trim();
+    var postTitle = post.querySelector(".title p").textContent.trim();
+    var postContent = post.querySelector(".content").textContent.trim();
+    sessionStorage.setItem("author", author);
+    sessionStorage.setItem("postTitle", postTitle);
+    sessionStorage.setItem("postContent", postContent);
     window.location.href = "../html/post.html";
 };
