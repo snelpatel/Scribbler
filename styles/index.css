@@ -1,3 +1,8 @@
+body {
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+}
+
 .posts-btn-wrapper {
     height: 100%;
     display: flex;
